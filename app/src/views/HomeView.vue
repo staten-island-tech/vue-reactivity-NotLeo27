@@ -1,11 +1,9 @@
-<script setup>
-import TheWelcome from "../components/TheWelcome.vue";
-</script>
-
 <template>
-  <h1></h1>
+  <div><SingleDouble /></div>
 </template>
 
-<script setup></script>
+<script setup>
+import SingleDouble from "@/components/SingleDouble.vue";
+</script>
 
 <style scoped></style>
