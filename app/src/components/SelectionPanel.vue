@@ -2,7 +2,7 @@
   <div>
     <h1>Badminton Game</h1>
     <div>
-      <form name="gametype" @submit.prevent="selectedGameType">
+      <form name="gametype" @submit.prevent="startGame">
         <div class="choices">
           <label for="singles">
             <input type="radio" value="singles" v-model="selectedGameType" checked />

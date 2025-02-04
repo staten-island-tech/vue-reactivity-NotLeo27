@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import SingleDouble from "@/components/SingleDouble.vue";
+import SingleDouble from "@/components/SelectionPanel.vue";
 </script>
 
 <style scoped></style>
