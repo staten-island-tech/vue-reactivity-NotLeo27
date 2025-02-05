@@ -25,7 +25,11 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+
 const selectedGameType = ref("singles");
+
+const startGame = () => {};
 </script>
 
 <style scoped></style>
