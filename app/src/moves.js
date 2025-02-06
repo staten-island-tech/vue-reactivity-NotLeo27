@@ -12,7 +12,7 @@ const choices = [
   {
     move: "Clear Shot",
     ties: [],
-    loses: [],
+    loses: ["Smash"],
   },
   {
     move: "Net Lift",
