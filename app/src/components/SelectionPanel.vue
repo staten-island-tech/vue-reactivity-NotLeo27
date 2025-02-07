@@ -28,8 +28,11 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 
 const selectedGameType = ref("singles");
+const router = useRouter();
 
-const startGame = () => {};
+const startGame = () => {
+  router.push({ name: "InGame", query: { type: selectedGameType.value } });
+};
 </script>
 
 <style scoped></style>

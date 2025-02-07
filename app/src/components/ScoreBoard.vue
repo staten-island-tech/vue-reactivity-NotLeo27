@@ -3,7 +3,8 @@
 </template>
 
 <script>
-export default {};
+const team1score = ref(0);
+const team2score = ref(0);
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

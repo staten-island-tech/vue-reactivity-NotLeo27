@@ -1,7 +1,7 @@
 const choices = [
   {
     move: "Drive Shot",
-    ties: ["Drive Shot"],
+    ties: [],
     loses: [],
   },
   {
@@ -12,17 +12,17 @@ const choices = [
   {
     move: "Clear Shot",
     ties: [],
-    loses: ["Smash"],
+    loses: [],
   },
   {
     move: "Net Lift",
     ties: [],
-    loses: ["Drive Shot"],
+    loses: [],
   },
   {
     move: "Net Shot",
     ties: [],
-    loses: ["Drive Shot"],
+    loses: [],
   },
   {
     move: "Smash",
