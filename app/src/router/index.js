@@ -1,16 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-import GameType from "@/views/GameType.vue"; // Import GameType.vue
-import InGame from "@/views/InGame.vue"; // Import InGame.vue
+import GameType from "@/views/GameType.vue";
+import InGame from "@/views/InGame.vue";
 
-// Define routes
 const routes = [
-  { path: "/", component: GameType }, // Home page (Game Type selection)
-  { path: "/ingame", name: "InGame", component: InGame }, // The InGame page
+  { path: "/", component: GameType },
+  { path: "/ingame", name: "InGame", component: InGame },
 ];
 
-// Create the router instance
 const router = createRouter({
-  history: createWebHistory(), // Enables history mode (no hash # in URLs)
+  history: createWebHistory(),
   routes,
 });
 
