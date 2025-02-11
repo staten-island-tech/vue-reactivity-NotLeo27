@@ -1,32 +1,32 @@
 const choices = [
   {
     move: "Drive Shot",
-    ties: [],
-    loses: [],
+    ties: ["Drive Shot"],
+    loses: ["Smash", "Drop Shot"],
   },
   {
     move: "Drop Shot",
-    ties: [],
-    loses: [],
+    ties: ["Drop Shot"],
+    loses: ["Net Shot"],
   },
   {
     move: "Clear Shot",
-    ties: [],
-    loses: [],
+    ties: ["Clear Shot"],
+    loses: ["Smash"],
   },
   {
     move: "Net Lift",
-    ties: [],
-    loses: [],
+    ties: ["Net Lift"],
+    loses: ["Smash"],
   },
   {
     move: "Net Shot",
-    ties: [],
-    loses: [],
+    ties: ["Net Shot"],
+    loses: ["Net Lift"],
   },
   {
     move: "Smash",
-    ties: [],
-    loses: [],
+    ties: ["Smash"],
+    loses: ["Net Lift", "Clear Shot"],
   },
 ];

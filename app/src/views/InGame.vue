@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div>// scoreboard thingy</div>
+    <ScoreBoard />
   </div>
 </template>
 
-<style></style>
+<script setup>
+import ScoreBoard from "@/components/ScoreBoard.vue";
+</script>
+
+<style scoped></style>
