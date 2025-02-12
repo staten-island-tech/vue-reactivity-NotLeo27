@@ -1,17 +1,19 @@
 <template>
-    <div class="move-container">
-      <div class="move-box" v-for="move in choices" :key="move.move">
-        {{ move.move }}
-      </div>
+  <div class="move-container">
+    <div class="move-box" v-for="move in singlesMoves" :key="singlesMoves.move">
+      {{ move.move }}
     </div>
+    <div class="move-box" v-for="move in doublesMoves" :key="doublesMoves.move">
+      {{ move.move }}
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { singles } from "./moves.js";
+import { singlesMoves, doublesMoves } from "../moves.js";
 </script>
 
 <style scoped>
- 
 .move-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -36,5 +38,4 @@ import { singles } from "./moves.js";
 .move-box:hover {
   background-color: lightgray;
 }
-
 </style>
