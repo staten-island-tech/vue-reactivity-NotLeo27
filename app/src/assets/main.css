@@ -5,6 +5,45 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Scoreboard styles */
+.scoreboard {
+  background-color: black;
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Button grid container */
+.moves-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Individual button styles */
+.move-button {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.move-button:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
 }
 
 a,
@@ -21,15 +60,29 @@ a,
   }
 }
 
+@media (max-width: 1023px) {
+  #app {
+    padding: 1rem;
+  }
+  
+  .moves-container {
+    gap: 0.5rem;
+  }
+  
+  .move-button {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  .moves-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
