@@ -1,13 +1,11 @@
 <template>
   <div>
-    <ScoreBoard />
-    <Moveset />
+    <BadmintonGame />
   </div>
 </template>
 
 <script setup>
-import ScoreBoard from "@/components/ScoreBoard.vue";
-import Moveset from "@/components/MovesetBadminton.vue";
+import BadmintonGame from "@/components/BadmintonGame.vue";
 </script>
 
 <style scoped></style>
