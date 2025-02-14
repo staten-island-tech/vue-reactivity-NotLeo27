@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <button v-if="move" @click="confirmMove" class="confirm-button">Confirm Move: {{ move }}</button>
+  <button v-if="move" @click="confirmMove" class="confirm-button">Confirm Move: {{ move }}?</button>
 </template>
 
 <script setup>
@@ -24,7 +24,7 @@ const selectMove = (selectedMove) => {
 };
 
 const confirmMove = () => {
-  console.log("Move confirmed:", move.value);
+  emit("moveSelected", move.value);
 };
 </script>
 
