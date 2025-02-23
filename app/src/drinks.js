@@ -1,0 +1,22 @@
+const drinks = [
+    { name: "Coca-Cola", price: 1.50, image: "Coca-Cola.png" },
+    { name: "Pepsi", price: 1.50, image: "Pepsi.png" },
+    { name: "Mountain Dew", price: 1.75, image: "Mountain-Dew.png" },
+    { name: "Dr Pepper", price: 1.50, image: "Dr-Pepper.png" },
+    { name: "Sprite", price: 1.50, image: "Sprite.png" },
+    { name: "Fanta Orange", price: 1.50, image: "Fanta-Orange.png" },
+    { name: "Gatorade Blue", price: 2.00, image: "Gatorade-Blue.png" },
+    { name: "Gatorade Orange", price: 2.00, image: "Gatorade-Orange.png" },
+    { name: "Red Bull", price: 2.50, image: "Red-Bull.png" },
+    { name: "Monster Energy", price: 2.75, image: "Monster-Energy.png" },
+    { name: "Arizona Green Tea", price: 1.25, image: "Arizona-Green-Tea.png" },
+    { name: "Lipton Iced Tea", price: 1.75, image: "Lipton-Iced-Tea.png" },
+    { name: "Snapple Peach Tea", price: 2.00, image: "Snapple-Peach-Tea.png" },
+    { name: "Vitamin Water XXX", price: 2.25, image: "Vitamin-Water-XXX.png" },
+    { name: "Powerade Grape", price: 1.75, image: "Powerade-Grape.png" },
+    { name: "Minute Maid Lemonade", price: 1.50, image: "Minute-Maid-Lemonade.png" },
+    { name: "Brisk Iced Tea", price: 1.50, image: "Brisk-Iced-Tea.png" },
+    { name: "7UP", price: 1.50, image: "7UP.png" },
+    { name: "Canada Dry Ginger Ale", price: 1.50, image: "Canada-Dry-Ginger-Ale.png" },
+    { name: "Nestlé Pure Life Water", price: 1.25, image: "Nestle-Pure-Life-Water.png" }
+];
