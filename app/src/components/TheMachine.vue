@@ -5,8 +5,10 @@ import { drinks } from "@/drinks";
 <template>
   <div class="container">
     <div v-for="drink in drinks" :key="drink.id" class="drink-card">
-      <img :src="drink.image" :alt="drink.name" class="drink-image" />
+      <img :src="drink.image" :alt="`Image of ${drink.name}`" class="drink-image" />
       <div class="drink-id">{{ drink.id }}</div>
+      <div class="drink-name">{{ drink.name }}</div>
+      <div class="drink-price">{{ drink.price }}</div>
     </div>
   </div>
 </template>
@@ -24,12 +26,17 @@ import { drinks } from "@/drinks";
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.drink-card:hover {
+  transform: scale(1.05);
 }
 
 .drink-image {
   width: 100px;
   height: 100px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .drink-id {
@@ -40,5 +47,18 @@ import { drinks } from "@/drinks";
   font-size: 18px;
   font-weight: bold;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.drink-name {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.drink-price {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #4CAF50; /* Green for pricing */
 }
 </style>
