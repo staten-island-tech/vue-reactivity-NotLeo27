@@ -1,12 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import PanelSelection from './components/PanelSelection.vue';
-import NumPad from './components/NumPad.vue';
 </script>
 
 <template>
   <RouterView />
-  <NumPad />
   <PanelSelection />
 </template>
 
