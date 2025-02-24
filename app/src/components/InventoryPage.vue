@@ -11,7 +11,7 @@ const props = defineProps({
     <h2>Inventory</h2>
     <ul v-if="inventory.length">
       <li v-for="item in inventory" :key="item.id">
-        <img :src="`/images/${item.image}`" :alt="item.name" width="50" />
+        <img :src="`${item.image}`" :alt="item.name" width="50" />
         {{ item.name }} - ${{ item.price }}
       </li>
     </ul>
