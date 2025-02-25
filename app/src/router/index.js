@@ -1,10 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import DrinkInventory from '../views/DrinkInventory.vue';
 import VendingMachine from '../views/VendingMachine.vue';
 
 const routes = [
-  { path: '/drinks', component: () => import('../views/DrinkInventory.vue') },
-  { path: '/vending', component: () => import('../views/VendingMachine.vue') },
+  { path: '/', component: VendingMachine }, // Default route to VendingMachine
 ];
 
 const router = createRouter({

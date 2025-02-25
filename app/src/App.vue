@@ -1,11 +1,8 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import PanelSelection from './components/PanelSelection.vue';
 </script>
 
 <template>
-  <RouterView />
-  <PanelSelection />
+  <router-view />
 </template>
 
 <style scoped>
