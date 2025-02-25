@@ -1,13 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import VendingMachine from '../views/VendingMachine.vue';
+import VendingMachine from '@/views/VendingMachine.vue';
 
 const routes = [
-  { path: '/', component: VendingMachine }, // Default route to VendingMachine
+  {
+    path: '/',
+    name: 'Home',
+    component: VendingMachine
+  }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 });
 
 export default router;

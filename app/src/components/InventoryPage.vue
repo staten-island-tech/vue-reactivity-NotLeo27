@@ -2,7 +2,11 @@
 import { defineProps } from "vue";
 
 const props = defineProps({
-  inventory: Array
+  inventory: {
+    type: Array,
+    required: true,
+    default: () => [],
+  }
 });
 </script>
 
@@ -10,10 +14,10 @@ const props = defineProps({
   <div class="inventory-container">
     <aside class="inventory-bar">
       <h2>Inventory</h2>
-      <ul v-if="inventory.length">
+      <ul v-if="inventory && inventory.length">
         <li v-for="item in inventory" :key="item.id">
-          <img :src="`${item.image}`" :alt="item.name" width="50" />
-          {{ item.name }} - ${{ item.price }}
+          <img :src="item.image || '/default-image.png'" :alt="item.name" width="50" />
+          <span>{{ item.name }} - ${{ item.price }}</span>
         </li>
       </ul>
       <p v-else>No drinks in inventory.</p>
@@ -40,6 +44,7 @@ const props = defineProps({
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -47,5 +52,9 @@ li {
   align-items: center;
   gap: 10px;
   margin: 5px 0;
+}
+
+img {
+  border-radius: 5px;
 }
 </style>

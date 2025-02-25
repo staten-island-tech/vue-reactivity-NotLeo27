@@ -21,9 +21,14 @@ const submitInput = () => {
   const matchedDrink = drinks.find((drink) => drink.id === drinkId);
 
   if (matchedDrink) {
-    inventory.value.push(matchedDrink);
-    console.log("Added to inventory:", matchedDrink);
-    emit("update-inventory", inventory.value);
+    const exists = inventory.value.some((item) => item.id === drinkId);
+    if (!exists) {
+      inventory.value.push(matchedDrink);
+      console.log("Added to inventory:", matchedDrink);
+      emit("update-inventory", matchedDrink); // Emit only the new drink
+    } else {
+      console.log("Drink already in inventory:", matchedDrink);
+    }
   } else {
     console.log("No drink found with ID:", drinkId);
   }
@@ -34,22 +39,22 @@ const submitInput = () => {
 </script>
 
 <template>
-  <div>
-    <div>Input: {{ inputValue }}</div>
-    <div>
+  <div class="num-pad">
+    <div class="display">Input: {{ inputValue }}</div>
+    <div class="buttons">
       <button v-for="num in numbers" :key="num" @click="appendNumber(num)">
         {{ num }}
       </button>
+      <button class="clear" @click="clearInput">Clear</button>
+      <button class="enter" @click="submitInput">Submit</button>
     </div>
-    <button @click="clearInput">Clear</button>
-    <button @click="submitInput">Submit</button>
     
     <InventoryPage :inventory="inventory" />
   </div>
 </template>
 
 <style scoped>
-.number-pad {
+.num-pad {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +62,7 @@ const submitInput = () => {
 }
 
 .display {
-  width: 100px;
+  width: 120px;
   height: 40px;
   background: #eee;
   text-align: center;
@@ -80,6 +85,11 @@ button {
   background: #ddd;
   border: none;
   border-radius: 5px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #ccc;
 }
 
 button.clear {
@@ -93,3 +103,4 @@ button.enter {
   color: white;
 }
 </style>
+  
