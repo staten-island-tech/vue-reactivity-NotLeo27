@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { drinks } from "@/drinks";
 import InventoryPage from "@/components/InventoryPage.vue";
 
@@ -36,6 +36,11 @@ const submitInput = () => {
   emit("input-submitted", inputValue.value);
   clearInput();
 };
+
+// Compute total price of inventory
+const totalPrice = computed(() => {
+  return inventory.value.reduce((sum, drink) => sum + drink.price, 0);
+});
 </script>
 
 <template>
@@ -49,7 +54,7 @@ const submitInput = () => {
       <button class="enter" @click="submitInput">Submit</button>
     </div>
     
-    <InventoryPage :inventory="inventory" />
+    <InventoryPage :inventory="inventory" :totalPrice="totalPrice" />
   </div>
 </template>
 
@@ -103,4 +108,3 @@ button.enter {
   color: white;
 }
 </style>
-  
